@@ -25,28 +25,28 @@ public class Ex8 {
         cod = scan.nextInt();
         
         // "switch" é uma estrutura condicional que testa uma variável com múltiplos valores possíveis de maneira mais eficiente do que com múltiplos if e else if
+        // "case" define uma opção específica que o switch vai testar
         switch (cod) { 
-            // "case" define uma opção específica que o switch vai testar
-            case 1: // Caso o código do produto seja 1 (Fogão)
+            case 1 -> {
+                // Caso o código do produto seja 1 (Fogão)
                 System.out.printf("%nFogão de R$%.2f%n", pro1);
                 System.out.print("\nEscolha a forma de pagamento (vista ou crédito): ");
                 forma = scan.next();
-                
                 // Adicionando descontos conforme a forma de pagamento
-                if(forma.equalsIgnoreCase("vista")){
+                if (forma.equalsIgnoreCase("vista")) {
                     desc = pro1 * 0.10; // Desconto de 10% à vista
                     pro1 = pro1 - desc;
                     System.out.printf("\nO valor total do produto com desconto de 10%%, à vista é: R$%.2f%n", pro1);
-                }else if(forma.equalsIgnoreCase("crédito")){
+                } else if(forma.equalsIgnoreCase("crédito")){
                     desc = pro1 * 0.05; // Desconto de 5% no cartão de crédito
                     pro1 = pro1 - desc;
                     System.out.printf("\nO valor total do produto com desconto de 5%% no cartão de crédito é: R$%.2f%n", pro1);
                 }else{
                     System.out.println("!!Forma de pagamento indisponível!!");
                 }
-                break; // O "break" encerra o bloco do switch, evitando que outros "cases" sejam executados
-            
-            case 2: // Caso o código do produto seja 2 (Geladeira)
+            }
+            case 2 -> {
+                // Caso o código do produto seja 2 (Geladeira)
                 System.out.printf("%nGeladeira de R$%.2f%n", pro2);
                 System.out.print("\nEscolha a forma de pagamento (vista ou crédito): ");
                 forma = scan.next();
@@ -63,9 +63,9 @@ public class Ex8 {
                 }else{
                     System.out.println("!!Forma de pagamento indisponível!!");
                 }
-                break;
-            default: // Caso o código inserido não corresponda a nenhum produto disponível, o bloco 'default' é executado
+            }
+            default -> // Caso o código inserido não corresponda a nenhum produto disponível, o bloco 'default' é executado
                 System.out.println("!!CÓDIGO INDISPONÍVEL!!");
-        }        
+        }
     } 
 }
