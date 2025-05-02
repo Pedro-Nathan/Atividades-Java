@@ -36,7 +36,7 @@ public class Ex11 {
             System.out.println("\n!!ATENÇÃO!! As dimensões não podem ser zero ou negativas.");
             
         }else{
-            // Exibindo o resultado do volume da caixa
+            // Calculando e exibindo o resultado do volume da caixa
             volume = comprimento * largura * altura;
             System.out.printf("%nO Resultado do volume da caixa é: %.2f%n", volume);
         }
