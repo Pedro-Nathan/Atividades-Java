@@ -16,17 +16,22 @@ public class Ex19 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
+        // Declaração das variáveis
         double tempo, velocidade, distancia, litrosUsados;
         
+        // Solicita o tempo gasto na viagem
         System.out.print("\nInforme o tempo gasto na viagem em horas: ");
         tempo = scan.nextDouble();
-        
+        // Solicita a velocidade média durante a viagem
         System.out.print("\nInforme a velocidade média durante a viagem: ");
         velocidade = scan.nextDouble();
         
+        // Calcula a distância total percorrida
         distancia = tempo * velocidade;
+        // Calcula os litros de combustível usados (12 km por litro)
         litrosUsados = distancia / 12;
         
+        // Exibe os resultados
         System.out.printf("\nA velocidade média foi de %.0f km/h%n", velocidade);
         System.out.printf("O tempo gasto na viagem foi de %.0f horas%n", tempo);
         System.out.printf("A distância percorrida foi de %.0f km%n", distancia);
